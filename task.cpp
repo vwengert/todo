@@ -10,6 +10,9 @@ Task::Task( const QString& name, QWidget* parent ) :
     ui->setupUi( this );
     setName( name );
     connect( ui->editTaskButton, &QPushButton::clicked, this, &Task::rename );
+    connect( ui->removeButton, &QPushButton::clicked, this, [this] {
+        emit removed( this );
+    } );
 }
 
 Task::~Task()
