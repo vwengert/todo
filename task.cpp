@@ -1,11 +1,12 @@
 #include "task.h"
 #include "ui_task.h"
 
-Task::Task(QWidget *parent) :
+Task::Task(const QString &name, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Task)
 {
     ui->setupUi(this);
+    setName(name);
 }
 
 Task::~Task()

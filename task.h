@@ -13,7 +13,7 @@ class Task : public QWidget
     Q_OBJECT
 
 public:
-    explicit Task(QWidget *parent = nullptr);
+    explicit Task(const QString& name, QWidget *parent = nullptr);
     ~Task();
 
     void setName(const QString& name);
